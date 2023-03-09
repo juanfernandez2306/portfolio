@@ -1,5 +1,6 @@
 import './assets/css/Hamburg_menu.css';
 import './assets/css/App.css';
+import TypedText from './assets/components/TypedText';
 
 function App() {
 
@@ -20,6 +21,22 @@ function App() {
           </aside>
         </header>
       </div>
+      <div className="container_main">
+        <main>
+          <aside>
+            <section className='container_main_text'>
+              <h4>
+                <span className='rotate_center'>&#128075;</span> ¡Hola!, mi nombre es
+              </h4>
+              <h1>Juan Fernández</h1>
+            </section>
+            <TypedText />
+          </aside>
+          <aside></aside>
+        </main>
+      </div>
+      <div className="container_portfolio"></div>
+      <div className="container_contact"></div>
     </>
   )
 }

@@ -58,3 +58,9 @@
 }
 
 /*end style hamburg menu*/
+
+@media screen and (min-width: 760px) {
+    .container_hamburg_menu{
+        display: none;
+    }
+}
