@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+}
+
+.container_header{
+    background-color: red;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+}
