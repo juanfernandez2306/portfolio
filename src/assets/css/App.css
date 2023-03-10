@@ -134,6 +134,25 @@ main aside:last-child{
     font-size: 1.8rem;
 }
 
+
+/**/
+.graticule{
+    fill: none;
+    stroke: var(--firt-color);
+    stroke-width: .5px;
+    stroke-opacity: .5;
+}
+
+.graticule.outline{
+    stroke-width: 2px;
+}
+
+.land{
+    stroke: var(--second-color);
+    fill: var(--firt-color);
+}
+/**/
+
 @media screen and (max-width: 760px) {
     .menu_link{
         display: none;

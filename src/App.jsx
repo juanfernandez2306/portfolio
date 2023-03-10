@@ -1,6 +1,7 @@
 import './assets/css/Hamburg_menu.css';
 import './assets/css/App.css';
 import TypedText from './assets/components/TypedText';
+import MapD3 from './assets/components/MapD3';
 
 function App() {
 
@@ -32,7 +33,7 @@ function App() {
             </section>
             <TypedText />
           </aside>
-          <aside></aside>
+          <MapD3 />
         </main>
       </div>
       <div className="container_portfolio"></div>
