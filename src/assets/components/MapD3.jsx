@@ -10,6 +10,7 @@ import {
     geoProjection, 
     json
 } from 'd3';
+import {geoAugust, geoEisenlohr} from 'd3-geo-projection';
 import { feature } from "topojson-client";
 
 function MapD3(){
@@ -22,6 +23,8 @@ function MapD3(){
         let optionProjections = [
             {name : "ortographic", projection: geoOrthographic().scale(90)},
             {name: "conic", projection: geoConicEqualArea().scale(50)},
+            {name: "geoAugust", projection: geoAugust().scale(50)},
+            {name: "geoEisenlohr", projection: geoEisenlohr().scale(25)},
             {name: "natural earth", projection: geoNaturalEarth1().scale(60)}
             
         ];
