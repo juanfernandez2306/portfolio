@@ -1,7 +1,7 @@
 :root{
     --color-primary: #FCFFE7;
-    --color-seconday: #00337C;
-    --third-color: #ffc83d;
+    --color-seconday: #00425A;
+    --third-color: #EDF1D6;
 }
 
 body{
@@ -14,21 +14,30 @@ body{
 }
 
 .container_header{
-    background-color: red;
+    position: fixed;
+    background-color: var(--color-primary);
     height: 4rem;
     width: 100%;
 }
 
 .container_main{
-    background-color: green;
-    height: calc(100vh - 4rem);
+    background-color: var(--color-seconday);
+    height: 100vh;
     width: 100%;
 }
 
-.container_portfolio{
-    background-color: aqua;
+.container_about_me{
+    background-color: var(--third-color);
     height: 100vh;
     width: 100%;
+}
+
+.container_profile img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    background-color: var(--color-seconday);
+    border-radius: 50%;
 }
 
 header{
@@ -60,6 +69,7 @@ header aside:last-child{
 }
 
 main{
+    background-color: var(--color-seconday);
     height: 100%;
     width: 100%;
     max-width: 1100px;
@@ -67,26 +77,25 @@ main{
     margin-right: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 260px;
     grid-template-areas: "name name"
                           "map map"  ;
 }
 
 main aside{
     height: 100%;
+    background-color: var(--color-seconday);
 }
 
 main aside:first-child{
-    background-color: var(--color-seconday);
     grid-area: name;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
 main aside:last-child{
-    background-color: brown;
     grid-area: map;
 }
 
@@ -108,11 +117,62 @@ main aside:last-child{
     margin-top: 2rem;
 }
 
+/*the color letter is color emoji*/
 .typed, .typed-cursor{
     font-size: 1.8rem;
-    color: var(--third-color);
+    color: #ffc83d;
     font-weight: 400;
     font-family: 'Inconsolata', monospace, sans-serif;
+}
+
+.about_me{
+    background-image: linear-gradient(to bottom, #183A1D, yellow, blue);
+    width: 100%;
+    max-width: 1100px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 5rem 240px 1fr;
+    grid-template-areas: "aboutTitle aboutTitle"
+                            "profileImg aboutText"
+                            "aboutSkill aboutSkill";
+}
+
+.container_profile{
+    grid-area: profileImg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_about{
+    grid-area: aboutTitle;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.title_about h3{
+    font-size: 2.5rem;
+}
+
+.container_text_about{
+    grid-area: aboutText;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_text_about p{
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+
+.skill{
+    grid-area: aboutSkill;
+    background-color: coral;
 }
 
 @keyframes rotate_center{
@@ -150,6 +210,13 @@ main aside:last-child{
 .land{
     stroke: var(--second-color);
     fill: var(--firt-color);
+}
+
+#map{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 /**/
 

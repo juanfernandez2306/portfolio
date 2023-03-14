@@ -13,7 +13,7 @@ function App() {
             <h1>jfcoordenadas</h1>
           </aside>
           <ul className="menu_link">
-            <li><a href="#">Acerca de mi</a></li>
+            <li><a href="#">Acerca de mí</a></li>
             <li><a href="#">Portafolio</a></li>
             <li><a href="#">Escríbeme</a></li>
           </ul>
@@ -36,7 +36,27 @@ function App() {
           <MapD3 />
         </main>
       </div>
-      <div className="container_portfolio"></div>
+      <div className="container_about_me">
+        <section className='about_me'>
+            <aside className='container_profile'>
+              <img src="/img/1674673086020.png" alt="profile" />
+            </aside>
+            <aside className='title_about'>
+              <h3>Acerca de mí</h3>
+            </aside>
+            <aside className='container_text_about'>
+              <p><span>&#x1F468;&#x200D;&#x1F4BC;</span> Ingeniero geodesta especializado en Sistemas de Información Geográfica (SIG o GIS por su acrónimo en inglés) con sólidos conocimientos en desarrollo de aplicaciones web de mapas basados en mejorar la experiencia visual del usuario. Apasionado por las ciencias de datos espaciales.
+              <span>&#x1F30D;</span>
+              <span>&#x1F4BB;</span>
+              <span>&#x1F4C8;</span>
+              <span>&#128506;&#65039;</span>
+              </p>
+            </aside>
+            <section className="skill">
+              skill
+            </section>
+        </section>
+      </div>
       <div className="container_contact"></div>
     </>
   )

@@ -17,12 +17,13 @@ function MapD3(){
 
     useEffect(() => {
         let width, height;
-        [width, height] = [300, 300];
+        [width, height] = [340, 250];
 
         let optionProjections = [
-            {name : "ortographic", projection: geoOrthographic().scale(100)},
-            {name: "natural earth", projection: geoNaturalEarth1().scale(50)},
-            {name: "conic", projection: geoConicEqualArea().scale(50)}
+            {name : "ortographic", projection: geoOrthographic().scale(90)},
+            {name: "conic", projection: geoConicEqualArea().scale(50)},
+            {name: "natural earth", projection: geoNaturalEarth1().scale(60)}
+            
         ];
 
         var i, n;
