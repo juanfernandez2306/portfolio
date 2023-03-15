@@ -1,233 +1,87 @@
 :root{
-    --color-primary: #FCFFE7;
-    --color-seconday: #00425A;
-    --third-color: #EDF1D6;
+    --blue-700: #051529;
+    --blue-300: #0048bd;
+    --blue-100: #9ec1fa;
+    --blue-50: #e5f0ff;
+
+    --width-hamburg: 2rem;
+    --height-hamburg: .4rem;
+    --height-sepatacion-hamburg: .6rem;
 }
 
 body{
     margin: 0;
     box-sizing: border-box;
+    background-color: var(--blue-700);
 }
 
-#root{
-    width: 100%;
-}
-
-.container_header{
-    position: fixed;
-    background-color: var(--color-primary);
-    height: 4rem;
-    width: 100%;
-}
-
-.container_main{
-    background-color: var(--color-seconday);
-    height: 100vh;
-    width: 100%;
-}
-
-.container_about_me{
-    background-color: var(--third-color);
-    height: 100vh;
-    width: 100%;
-}
-
-.container_profile img{
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    background-color: var(--color-seconday);
-    border-radius: 50%;
-}
-
-header{
-    background-color: var(--color-primary);
-    width: 100%;
-    height: 100%;
-    max-width: 1100px;
+.header_principal{
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu_link{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    margin-right: 1rem;
-}
-
-header aside:first-child{
-    margin-left: 1rem;
-}
-
-header aside:last-child{
-    margin-right: 1rem;
-}
-
-main{
-    background-color: var(--color-seconday);
-    height: 100%;
     width: 100%;
     max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 260px;
-    grid-template-areas: "name name"
-                          "map map"  ;
+    color: var(--blue-50);
 }
 
-main aside{
-    height: 100%;
-    background-color: var(--color-seconday);
-}
-
-main aside:first-child{
-    grid-area: name;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-main aside:last-child{
-    grid-area: map;
-}
-
-.container_main_text h4{
-    font-size: 1.5rem;
+.header_principal ul{
+    list-style-type: none;
     margin: 0;
-    text-align: center;
-    color: var(--color-primary);
-    font-weight: normal;
+    padding: 0;
 }
 
-.container_main_text h1{
-    font-size: 5rem;
-    margin: 0;
-    color: var(--color-primary);
+.header_principal ul li a{
+    text-decoration: none;
+    color: var(--blue-50);
 }
 
-.container_typed{
-    margin-top: 2rem;
-}
+/*add style menu hamburg*/
 
-/*the color letter is color emoji*/
-.typed, .typed-cursor{
-    font-size: 1.8rem;
-    color: #ffc83d;
-    font-weight: 400;
-    font-family: 'Inconsolata', monospace, sans-serif;
-}
-
-.about_me{
-    background-image: linear-gradient(to bottom, #183A1D, yellow, blue);
-    width: 100%;
-    max-width: 1100px;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: 5rem 240px 1fr;
-    grid-template-areas: "aboutTitle aboutTitle"
-                            "profileImg aboutText"
-                            "aboutSkill aboutSkill";
-}
-
-.container_profile{
-    grid-area: profileImg;
+.container_hamburg_menu{
+    height: 40px;
     display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-.title_about{
-    grid-area: aboutTitle;
-    display: flex;
-    align-items: baseline;
     justify-content: center;
+    cursor: pointer;
 }
 
-.title_about h3{
-    font-size: 2.5rem;
+.hamburg_menu{
+    width: var(--width-hamburg);
+    height: var(--height-hamburg);
+    position: relative;
+    transition: all .4s;
+    background: var(--blue-50);
 }
 
-.container_text_about{
-    grid-area: aboutText;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hamburg_menu::after{
+    content: "";
+    position: absolute;
+    width: var(--width-hamburg);
+    height: var(--height-hamburg);
+    top: var(--height-sepatacion-hamburg);
+    transition: all .4s;
+    background: var(--blue-50);
 }
 
-.container_text_about p{
-    font-size: 1.4rem;
-    line-height: 1.7rem;
+.hamburg_menu::before{
+    content: "";
+    position: absolute;
+    width: var(--width-hamburg);
+    height: var(--height-hamburg);
+    bottom: var(--height-sepatacion-hamburg);
+    transition: all .4s;
+    background: var(--blue-50);
 }
 
-.skill{
-    grid-area: aboutSkill;
-    background-color: coral;
+.container_hamburg_menu.active .hamburg_menu::after{
+    transform: rotateZ(45deg) translate(-.42rem, -.42rem);
 }
 
-@keyframes rotate_center{
-    0%{ transform: rotate(0); }
-    10%{ transform: rotate(14deg); }
-    20%{ transform: rotate(-8deg); }
-    30%{ transform: rotate(14deg); }
-    40%{ transform: rotate(-4deg); }
-    50%{ transform: rotate(10deg); }
-    60%{ transform: rotate(0); }
-    100%{ transform: rotate(0); }
+.container_hamburg_menu.active .hamburg_menu::before{
+    transform: rotateZ(-45deg) translate(-.42rem, .42rem);
 }
 
-.rotate_center{
-    animation-name: rotate_center;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    display: inline-block;
-    font-size: 1.8rem;
+.container_hamburg-menu.active .hamburg_menu{
+    background: transparent;
 }
 
-
-/**/
-.graticule{
-    fill: none;
-    stroke: var(--firt-color);
-    stroke-width: .5px;
-    stroke-opacity: .5;
-}
-
-.graticule.outline{
-    stroke-width: 2px;
-}
-
-.land{
-    stroke: var(--second-color);
-    fill: var(--firt-color);
-}
-
-#map{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-/**/
-
-@media screen and (max-width: 760px) {
-    .menu_link{
-        display: none;
-    }
-
-    .container_main_text h1{
-        font-size: 3.5rem;
-        line-height: 3rem;
-        text-align: center;
-    }
-}
+/*end style hamburg menu*/
