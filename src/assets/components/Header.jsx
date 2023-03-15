@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import Location from "../icons/Location";
 function Header(){
 
     const menuRef = useRef();
@@ -14,6 +15,7 @@ function Header(){
         <>
         <header className="header_principal">
             <aside className="logo">
+                <Location />
                 <h1>jfcoordenadas.xyz</h1>
             </aside>
             <ul className={"link_menu" + (menuStatus ? " active": "")}>
