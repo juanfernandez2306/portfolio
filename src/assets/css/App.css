@@ -10,84 +10,93 @@
 body{
     margin: 0;
     box-sizing: border-box;
-    background-color: var(--blue-700);
 }
 
 #root{
-    width: 100vw;
+    width: 100%;
     max-width: 1100px;
+    background-color: var(--blue-700);
 }
 
-.header_principal{
+.nav_principal{
     position: fixed;
-    margin-left: auto;
-    margin-right: auto;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
     width: 100%;
-    color: var(--blue-50);
     height: 4rem;
+}
 
+.nav_principal main{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
-.header_principal aside:first-child{
-    margin-left: 1rem;
+.logo svg{
+    width: 2rem;
+    height: 2rem;
+    fill: var(--blue-50);
 }
 
-.header_principal aside:last-child{
-    margin-right: 1rem;
+.logo h1{
+    margin: 0;
+    color: var(--blue-50);
 }
 
-.header_principal ul{
-    list-style-type: none;
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.link_menu{
+    background-color: var(--blue-500);
     margin: 0;
     padding: 0;
 }
 
-.header_principal ul li a{
-    text-decoration: none;
+.link_menu li{
+    list-style-type: none;
+}
+
+.link_menu li a{
     color: var(--blue-50);
+    text-decoration: none;
 }
 
-.header_principal .link_menu{
-    position: fixed;
-    top: 0;
-    left: 100%;
-    background-color: var(--blue-500);
-    width: 100%;
-    height: 100vh;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 2rem;
-    align-items: center;
-    transition: left .3s;
-    padding-top: 4rem;
-    font-size: 1.5rem;
-}
+@media screen and (max-width: 768px) {
+    
+    .link_menu{
+        position: fixed;
+        top: 0;
+        left: 100%;
+        height: 100vh;
+        width: 100%;
+        z-index: 1000;
+        transition: left 0.3s;
+    }
 
-.header_principal ul.link_menu.active{
-    left: 0;
-}
+    .link_menu.active{
+        left: 0;
+    }
 
-.header_principal ul.link_menu li a:hover{
-    color: var(--blue-200);
-}
+    .link_menu li{
+        margin-top: 4rem;
+    }
 
-.header_principal .logo{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: .5rem;
-}
+    .logo{
+        padding-left: 1rem;
+    }
 
-.header_principal .logo svg{
-    width: 2rem;
-    height: 2rem;
-    fill: var(--blue-50);
+    .container_hamburg_menu{
+        z-index: 1100;
+        padding-right: 1rem;
+    }
 }
 
 /*add style menu hamburg*/
@@ -98,7 +107,6 @@ body{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 2;
 }
 
 .hamburg_menu{
@@ -146,3 +154,95 @@ body{
 }
 
 /*end style hamburg menu*/
+
+.home{
+    height: 95vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4rem 270px;
+    grid-template-areas: "name" "typed" "map";
+}
+
+.welcome{
+    grid-area: name;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.welcome h2, .welcome h4{
+    margin: .5rem;
+    color: var(--blue-50);
+}
+
+.welcome h4{
+    font-size: 1.7rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.welcome h2{
+    font-size: 3rem;
+    line-height: 2.5rem;
+    text-align: center;
+}
+
+.rotate_center{
+    animation-name: rotate_center;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    display: inline-block;
+    font-size: 1.8rem;
+}
+
+@keyframes rotate_center{
+    0%{ transform: rotate(0); }
+    10%{ transform: rotate(14deg); }
+    20%{ transform: rotate(-8deg); }
+    30%{ transform: rotate(14deg); }
+    40%{ transform: rotate(-4deg); }
+    50%{ transform: rotate(10deg); }
+    60%{ transform: rotate(0); }
+    100%{ transform: rotate(0); }
+}
+
+.container_typed{
+    grid-area: typed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.typed, .typed-cursor{
+    font-size: 1.5rem;
+    color: #ffc83d;
+    font-family: 'Inconsolata', monospace, sans-serif;
+    font-weight: 400;
+}
+
+#map{
+    grid-area: map;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/**/
+.graticule{
+    fill: none;
+    stroke: var(--blue-50);
+    stroke-width: .5px;
+    stroke-opacity: .5;
+}
+
+.graticule.outline{
+    stroke-width: 2px;
+}
+
+.land{
+    stroke: var(--blue-200);
+    fill: var(--blue-50);
+}
+/**/
