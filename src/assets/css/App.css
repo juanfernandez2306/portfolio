@@ -26,23 +26,19 @@ body{
     background-color: var(--blue-700);
 }
 
-.projects{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 0;
+.container_card_project{
+    display: grid;
+    gap: 3rem;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
+    padding: 1rem;
 }
 
 .card_project{
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: .3rem;
-    margin: 1rem;
 }
 
 .card_project h3{
@@ -53,12 +49,8 @@ body{
     text-transform: capitalize;
 }
 
-.container_img{
-    width: 100%;
-}
-
-.container_img img{
-    width: 100%;
+.card_project img{
+    width: 98%;
     border: 1px solid var(--blue-100);
     padding: 0.25rem;
     border-radius: 0.25rem;
