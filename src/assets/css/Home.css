@@ -1,0 +1,91 @@
+.home{
+    height: 95vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4rem 270px;
+    grid-template-areas: "name" "typed" "map";
+}
+
+.welcome{
+    grid-area: name;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.welcome h2, .welcome h4{
+    margin: .5rem;
+    color: var(--blue-50);
+}
+
+.welcome h4{
+    font-size: 1.7rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.welcome h2{
+    font-size: 3rem;
+    line-height: 2.5rem;
+    text-align: center;
+}
+
+.rotate_center{
+    animation-name: rotate_center;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    display: inline-block;
+    font-size: 1.8rem;
+}
+
+@keyframes rotate_center{
+    0%{ transform: rotate(0); }
+    10%{ transform: rotate(14deg); }
+    20%{ transform: rotate(-8deg); }
+    30%{ transform: rotate(14deg); }
+    40%{ transform: rotate(-4deg); }
+    50%{ transform: rotate(10deg); }
+    60%{ transform: rotate(0); }
+    100%{ transform: rotate(0); }
+}
+
+.container_typed{
+    grid-area: typed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.typed, .typed-cursor{
+    font-size: 1.5rem;
+    color: #ffc83d;
+    font-family: 'Inconsolata', monospace, sans-serif;
+    font-weight: 400;
+}
+
+#map{
+    grid-area: map;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/**/
+.graticule{
+    fill: none;
+    stroke: var(--blue-50);
+    stroke-width: .5px;
+    stroke-opacity: .5;
+}
+
+.graticule.outline{
+    stroke-width: 2px;
+}
+
+.land{
+    stroke: var(--blue-200);
+    fill: var(--blue-50);
+}
+/**/

@@ -1,0 +1,149 @@
+.nav_principal{
+    background-color: var(--blue-700);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+}
+
+.nav_principal main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo svg{
+    width: 2rem;
+    height: 2rem;
+    fill: var(--blue-50);
+}
+
+.logo h1{
+    margin: 0;
+    color: var(--blue-50);
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.link_menu{
+    margin: 0;
+    padding: 0;
+}
+
+.link_menu li{
+    list-style-type: none;
+}
+
+.link_menu li a{
+    color: var(--blue-50);
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.link_menu li a:hover{
+    color: var(--blue-200);
+}
+
+@media screen and (max-width: 768px) {
+    
+    .link_menu{
+        position: fixed;
+        top: 0;
+        left: 100%;
+        height: 100vh;
+        width: 100%;
+        z-index: 1000;
+        transition: left 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 1.5rem;
+        background-color: var(--blue-500);
+    }
+
+    .link_menu.active{
+        left: 0;
+    }
+
+    .link_menu li{
+        margin-top: 4rem;
+    }
+
+    .logo{
+        padding-left: 1rem;
+    }
+
+    .container_hamburg_menu{
+        z-index: 1100;
+        padding-right: 1rem;
+    }
+}
+
+/*add style menu hamburg*/
+
+.container_hamburg_menu{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hamburg_menu{
+    --width-hamburg: 2rem;
+    --height-hamburg: .2rem;
+    --height-sepatacion-hamburg: .6rem;
+
+    width: var(--width-hamburg);
+    height: var(--height-hamburg);
+    position: relative;
+    transition: all .4s;
+    background: var(--blue-50);
+}
+
+.hamburg_menu::after{
+    content: "";
+    position: absolute;
+    width: var(--width-hamburg);
+    height: var(--height-hamburg);
+    top: var(--height-sepatacion-hamburg);
+    transition: all .4s;
+    background: var(--blue-50);
+}
+
+.hamburg_menu::before{
+    content: "";
+    position: absolute;
+    width: var(--width-hamburg);
+    height: var(--height-hamburg);
+    bottom: var(--height-sepatacion-hamburg);
+    transition: all .4s;
+    background: var(--blue-50);
+}
+
+.container_hamburg_menu.active .hamburg_menu::after{
+    transform: rotateZ(45deg) translate(-.42rem, -.42rem);
+}
+
+.container_hamburg_menu.active .hamburg_menu::before{
+    transform: rotateZ(-45deg) translate(-.42rem, .42rem);
+}
+
+.container_hamburg_menu.active .hamburg_menu{
+    background: transparent;
+}
+
+/*end style hamburg menu*/
