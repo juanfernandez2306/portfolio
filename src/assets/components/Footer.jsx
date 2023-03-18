@@ -1,4 +1,3 @@
-import SwiperCard from './SwiperCard';
 import FormFormik from './FormFormik';
 import Twitter from '../icons/Twitter';
 import Github from '../icons/Github';
