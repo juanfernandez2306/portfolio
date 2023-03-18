@@ -5,7 +5,7 @@ import Home from './assets/components/Home';
 import Projects from './assets/components/Projects';
 import Title from './assets/components/Title';
 import AboutMe from './assets/components/AboutMe';
-import SwiperCard from './assets/components/SwiperCard';
+import Footer from './assets/components/Footer';
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
     <Projects />
     <Title text_title="Acerca de mí" />
     <AboutMe />
-    <SwiperCard />
+    <Footer />
     </>
   )
 }
