@@ -110,7 +110,7 @@ function MapD3(){
                 .attr("d", pathGenerator);
         })
         .then(data => {
-            let interval = setInterval(loop, 6000);
+            let interval = setInterval(loop, 4000);
         })
 
     }, [])
