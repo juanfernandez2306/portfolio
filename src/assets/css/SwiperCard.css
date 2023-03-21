@@ -1,0 +1,39 @@
+@import url(./config.css);
+
+.swiper {
+    width: 100%;
+    max-width: 1100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+    
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide a {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.swiper-slide a svg{
+    width: 200px;
+    height: 200px;
+}
+
+.swiper-slide a.colorSvg svg{
+    fill: var(--blue-50);
+    stroke: var(--blue-50);
+}

@@ -1,0 +1,115 @@
+@import url(./config.css);
+
+
+form{
+    border: 1px solid var(--blue-200);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  form button{
+    width: 100%;
+    padding: 0.4rem 0.8rem;
+    border: 2px solid var(--blue-200);
+    background-color: var(--yellow-1000);
+    color: var(--blue-700);
+    font-size: var(--font-size-btn);
+    border-radius: .5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+  
+  form button:hover{
+    opacity: .5;
+  }
+  
+  @media screen and (min-width: 768px) {
+    form{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas: "headerTitle headerTitle"
+                            "name email"
+                            "message message"
+                            "submit submit";
+      justify-items: center;
+      align-items: center;
+    }
+  
+    form h1{
+      grid-area: headerTitle;
+    }
+  
+    .container_input.first{
+      grid-area: name;
+    }
+  
+    .container_input.second{
+      grid-area: email;
+    }
+  
+    .container_input.third{
+      grid-area: message;
+    }
+  
+    form button{
+      grid-area: submit;
+      width: 30%;
+    }
+  
+  }
+  
+  form h1{
+    margin: 0;
+    color: var(--blue-100);
+    font-size: var(--font-size-subtitle);
+    font-family: var(--font-family-body);
+  }
+  
+  .container_input, .container_input textarea{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    font-size: var(--font-size-btn);
+  }
+  
+  .container_input label{
+    color: var(--blue-100);
+    padding-left: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: var(--font-size-btn);
+    font-family: var(--font-family-body);
+  }
+  
+  .container_input input, .container_input textarea{
+    width: 98%;
+    font-size: 1.2rem;
+    padding: .25rem;
+    color: var(--blue-50);
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--blue-100)
+  }
+  
+  .container_input input:focus, .container_input textarea:focus{
+    outline: none;
+  }
+  
+  /**/
+  
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+      transition: background-color 600000s 0s, color 600000s 0s;
+  }
+  
+  input[data-autocompleted] {
+      background-color: transparent !important;
+  }
+  

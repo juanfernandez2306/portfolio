@@ -1,5 +1,7 @@
 import { Formik, Field, Form } from 'formik';
 
+import '../../css/Formformik.css';
+
 const FormFormik = () => (
   <>
     <Formik

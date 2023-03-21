@@ -1,10 +1,15 @@
-import FormFormik from './FormFormik';
+import FormFormik from './footer/FormFormik';
+import SwiperCard from './footer/SwiperCard';
+
 import Twitter from '../icons/Twitter';
 import Github from '../icons/Github';
 
+import '../css/Footer.css';
+
 export default function Footer(){
     return(
-        <footer className="footer">
+        <footer className="footer" id="contact" >
+            <SwiperCard />
             <aside className="title_footer">
                 <h3>¿Tienes algún proyecto?</h3>
                 <h1>Estoy disponible como programador SIG</h1>

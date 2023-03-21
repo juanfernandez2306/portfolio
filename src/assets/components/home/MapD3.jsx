@@ -98,7 +98,7 @@ function MapD3(){
             update(optionProjections[i]);
         };
 
-        const urlWorldjson = '/countries-110m.json';
+        const urlWorldjson = 'assets/countries-110m.json';
 
         json(urlWorldjson)
         .then(data => {
@@ -110,7 +110,7 @@ function MapD3(){
                 .attr("d", pathGenerator);
         })
         .then(data => {
-            let interval = setInterval(loop, 4000);
+            let interval = setInterval(loop, 6000);
         })
 
     }, [])

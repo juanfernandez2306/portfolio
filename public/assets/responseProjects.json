@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "_url_demo" : "https://mapazulia.jfcoordenadas.xyz/",
+        "_url_code": "https://github.com/juanfernandez2306/map_leaflet_simple",
+        "_title": "Mapa sanitario Zulia",
+        "_title_btn": "Demo",
+        "_url_img_mobile": "assets/overview/mapa_sanitario_zulia_mobile.gif",
+        "_url_img_web": "assets/overview/mapa_sanitario_zulia.gif"
+    },
+    {
+        "id": 2,
+        "_url_demo" : "https://mapacovid.jfcoordenadas.xyz/",
+        "_url_code": "https://github.com/juanfernandez2306/map_leaflet_simple",
+        "_title": "Mapa COVID19 Zulia",
+        "_title_btn": "Demo",
+        "_url_img_mobile": "assets/overview/mapa_covid_mobile.gif",
+        "_url_img_web": "assets/overview/mapa_covid.gif"
+    },
+    {
+        "id": 3,
+        "_url_demo" : "https://cercaniacentrosalud.jfcoordenadas.xyz/",
+        "_url_code": "https://github.com/juanfernandez2306/map_leaflet_simple",
+        "_title": "Cercania Centros de Salud Zulia",
+        "_title_btn": "Demo",
+        "_url_img_mobile": "assets/overview/cercania_centro_salud_mobile.gif",
+        "_url_img_web": "assets/overview/cercania_centro_salud.gif"
+    }
+]

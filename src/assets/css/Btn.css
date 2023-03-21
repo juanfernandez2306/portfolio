@@ -1,0 +1,42 @@
+@import url(./config.css);
+
+.btn{
+    border: 1px solid var(--blue-200);
+    padding: 0.4rem 0.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.btn span{
+    font-size: var(--font-size-btn);
+    font-weight: 700;
+    font-family: var(--font-family-code);
+    color: var(--blue-700);
+}
+
+.btn svg{
+    width: 1.6rem;
+    height: 1.6rem;
+    stroke: var(--blue-700);
+}
+
+.btn:hover{
+    opacity: .5;
+}
+
+.btn.primary{
+    background-color: var(--yellow-1000);
+}
+
+.btn.secondary{
+    background-color: var(--blue-50);
+}
+
+.btn.disabled{
+    background-color: var(--grey-50);
+    pointer-events: none;
+}
+

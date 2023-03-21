@@ -1,3 +1,5 @@
+@import url(./config.css);
+
 .container_card_project{
     display: grid;
     gap: 3rem;
@@ -17,7 +19,9 @@
     margin-top: .5rem;
     margin-bottom: .5rem;
     color: var(--blue-50);
-    font-size: 1.7rem;
+    font-size: var(--font-size-header);
+    font-family: var(--font-family-body);
+    font-weight: 400;
     text-transform: capitalize;
 }
 
@@ -37,44 +41,4 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
-}
-
-.container_btn a{
-    color: var(--blue-50);
-    text-decoration: none;
-    padding: 0.375rem 0.75rem;
-    border-radius: .25rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: .25rem;
-    border: 1px solid var(--blue-100);
-}
-
-.container_btn a span{
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-
-.container_btn a svg{
-    width: 1.5rem;
-    height: 1.5rem;
-}
-
-.btn_eyes{
-    background-color: var(--yellow-1000);
-}
-
-.container_btn a span{
-    color: var(--blue-700);
-}
-
-.container_btn svg{
-    fill: var(--blue-700);
-    stroke: var(--blue-700);
-}
-
-.btn_code{
-    background-color: var(--blue-50);
 }

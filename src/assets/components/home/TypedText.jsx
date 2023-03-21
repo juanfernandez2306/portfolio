@@ -9,9 +9,9 @@ function TypedText(){
     useEffect(() => {
         const option_typed = {
             strings : ['Desarrollador Web SIG', 'Analista SIG', 'Cartógrafo'],
-            typeSpeed: 75,
+            typeSpeed: 100,
             startDeley: 300,
-            backSpeed: 75,
+            backSpeed: 100,
             backDeley: 1200,
             loop: true,
             loopCount: false,

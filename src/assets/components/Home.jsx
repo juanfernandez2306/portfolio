@@ -1,7 +1,9 @@
-import TypedText from './TypedText';
-import MapD3 from './MapD3';
+import TypedText from './home/TypedText';
+import MapD3 from './home/MapD3';
+import '../css/Home.css';
 
 export default function Home(){
+    
     return(
         <section className="home" id="home">
             <aside className="welcome">

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@400&display=swap');
+
+
+
+:root{
+    --font-size-title: 3rem;
+    --font-size-subtitle: 1.6rem;
+    --font-size-header: 1.4rem;
+    --font-size-btn: 1.2rem;
+
+    --font-family-code: 'M PLUS Code Latin', monospace;
+    --font-family-body: 'Roboto', sans-serif;
+
+    --blue-700: #051529;
+    --blue-600: #679def;
+    --blue-500: #1f2e5c;
+    --blue-300: #0048bd;
+    --blue-200: #2b75ee;
+    --blue-100: #9ec1fa;
+    --blue-50: #e5f0ff;
+
+    --grey-50: #7f8487;
+
+    --yellow-1000: #ffc83d;
+}
+

@@ -1,3 +1,5 @@
+@import url(./config.css);
+
 .home{
     height: 100vh;
     width: 100%;
@@ -21,15 +23,19 @@
 }
 
 .welcome h4{
-    font-size: 1.7rem;
+    font-size: var(--font-size-subtitle);
     line-height: 1.5rem;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 .welcome h2{
-    font-size: 3rem;
+    font-size: var(--font-size-title);
     line-height: 2.5rem;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
 }
 
 .rotate_center{
@@ -59,9 +65,9 @@
 }
 
 .typed, .typed-cursor{
-    font-size: 1.5rem;
-    color: #ffc83d;
-    font-family: 'Inconsolata', monospace, sans-serif;
+    font-size: var(--font-size-subtitle);
+    color: var(--yellow-1000);
+    font-family: 'M PLUS Code Latin', sans-serif;
     font-weight: 400;
 }
 

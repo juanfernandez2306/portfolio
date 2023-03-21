@@ -1,0 +1,18 @@
+@import url(./config.css);
+
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+  
+  .title h2{
+    color: var(--blue-100);
+    text-transform: capitalize;
+    font-size: var(--font-size-subtitle);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin: 0;
+  }

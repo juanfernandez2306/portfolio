@@ -1,4 +1,3 @@
-import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -10,16 +9,17 @@ import "swiper/css/pagination";
 // import required modules
 import { Autoplay, EffectCoverflow, Pagination } from "swiper";
 
-import Qgis from '../icons/Qgis';
-import Excel from '../icons/Excel';
-import AutocadDWG from '../icons/AutocadDWG';
-import GoogleEarth from '../icons/GoogleEarth';
-import Laravel from '../icons/Laravel';
-import Leaflet from '../icons/Leaflet';
-import LogoReact from '../icons/LogoReact';
-import Mysql from '../icons/Mysql';
-import Python from '../icons/Python';
+import Qgis from '../../icons/Qgis';
+import Excel from '../../icons/Excel';
+import AutocadDWG from '../../icons/AutocadDWG';
+import GoogleEarth from '../../icons/GoogleEarth';
+import Laravel from '../../icons/Laravel';
+import Leaflet from '../../icons/Leaflet';
+import LogoReact from '../../icons/LogoReact';
+import Mysql from '../../icons/Mysql';
+import Python from '../../icons/Python';
 
+import '../../css/SwiperCard.css';
 
 export default function SwiperCard() {
   return (
