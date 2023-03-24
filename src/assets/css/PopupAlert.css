@@ -1,0 +1,249 @@
+@import url(./config.css);
+
+.response_preloader.hide{
+    display: none;
+}
+
+@keyframes fade_out_data {
+    0%{
+        opacity: 1;
+    }
+    20%{
+        opacity: .7;
+    }
+    50%{
+        opacity: .5;
+    }
+    60%{
+        opacity: .2;
+    }
+    80%{
+        opacity: .1;
+    }
+}
+
+.response_preloader.show.out{
+    animation-duration: 10s;
+    animation-name: fade_out_data;
+}
+
+.response_preloader.show{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-duration: .7s;
+    z-index: 2000;
+    animation-duration: .7s;
+    animation-name: fade_in_data;
+}
+
+@keyframes fade_in_data{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.response_preloader.show .preloader_wallpaper{
+    background-color: var(--blue-500);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    border-radius: .5rem;
+}
+
+.response_preloader.show .preloader_wallpaper h3{
+    margin: 0;
+    font-size: var(--font-size-btn);
+    font-weight: normal;
+    color: var(--blue-50);
+    font-family: var(--font-family-body);
+}
+
+
+:root{
+    --label-preloader: 5rem;
+    --width-icon: 1.12rem;
+    --heigth-icon: 2.24rem;
+    --left-icon: 1.12rem;
+}
+
+@keyframes rotate{
+    50%{
+        border-left-color: var(--fourth-color);
+    }
+    75%{
+        border-left-color: var(--firts-color);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.response_preloader.show .preloader_wallpaper label{
+    position: relative;
+    height: var(--label-preloader);
+    width: var(--label-preloader);
+    display: inline-block;
+    border-radius: 50%;
+    animation: rotate 1.2s linear infinite;
+    border: 2px solid var(--blue-50);
+    opacity: .5;
+    border-left-color: var(--blue-100);
+}
+
+
+.response_preloader.show .preloader_wallpaper label .check-icon{
+    display: none;
+}
+
+
+@keyframes check-icon{
+    0%{
+        height: 0;
+        width: 0;
+        opacity: 1;
+    }
+    20%{
+        height: 0;
+        width: var(--width-icon);
+        opacity: 1;
+    }
+    40%{
+        height: var(--heigth-icon);
+        width: var(--width-icon);
+        opacity: 1;
+    }
+    100%{
+        height: var(--heigth-icon);
+        width: var(--width-icon);
+        opacity: 1;
+    }
+}
+
+.response_preloader.show .preloader_wallpaper.success label .check-icon:after{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: var(--left-icon);
+    transform: scaleX(-1) rotate(135deg);
+    border-top: 4px solid var(--blue-50);
+    border-right: 4px solid var(--blue-100);
+    height: var(--heigth-icon);
+    width: var(--width-icon);
+    transform-origin: left top;
+    animation: check-icon 0.8s ease;
+}
+
+.response_preloader.show .preloader_wallpaper.stop_animation_preloader label .check-icon{
+    display: block;
+}
+
+.response_preloader.show .preloader_wallpaper.stop_animation_preloader label{
+    animation: none;
+    border-color: var(--blue-50);
+    opacity: .8;
+    transition: border 0.5s ease-out;
+}
+
+/*icon error*/
+@keyframes error-icon{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: .2;
+    }
+    60%{
+        opacity: .6;
+    }
+    80%{
+        opacity: .8;
+    }
+}
+
+.response_preloader.show .preloader_wallpaper.error label .check-icon:after{
+    position: absolute;
+    content: "";
+    width: 3rem;
+    height: .2rem;
+    top: 1.6rem;
+    background-color: var(--yellow-1000);
+    transform: rotateZ(45deg) translate(-.4rem, 1.7rem);
+    animation: error-icon .8s ease;
+}
+
+.response_preloader.show .preloader_wallpaper.error label .check-icon::before{
+    position: absolute;
+    content: "";
+    width: 3rem;
+    height: .2rem;
+    top: 1.6rem;
+    background-color: var(--yellow-1000);
+    transform: rotateZ(-45deg) translate(-1.7rem, -.4rem);
+    animation: error-icon .8s ease;
+}
+
+.response_preloader.show .preloader_wallpaper.stop_animation_preloader.error label{
+    border-color: var(--yellow-1000);
+}
+
+.response_preloader.show .preloader_wallpaper label + h3{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.preloader_wallpaper label + h3 span{
+    display: block;
+}
+
+.preloader_wallpaper label + h3 span::before{
+    content: "";
+}
+
+.preloader_wallpaper.success label + h3 span,
+.preloader_wallpaper.error label + h3 span{
+    display: none;
+}
+
+.preloader_wallpaper.success label + h3::after{
+    content: "Email enviado satisfactoriamente";
+}
+
+.preloader_wallpaper.error label + h3::after{
+    color: var(--yellow-1000);
+    content: "Ocurrio un error al enviar Email";
+}
+
+.response_preloader.show .preloader_wallpaper h2.message{
+    display: none;
+}
+
+.response_preloader.show .preloader_wallpaper button{
+    width: 100%;
+    padding: 0.4rem 0.8rem;
+    border: 2px solid var(--blue-200);
+    background-color: var(--blue-200);
+    color: var(--blue-50);
+    font-size: var(--font-size-btn);
+    border-radius: .5rem;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+.response_preloader.show .preloader_wallpaper button:hover{
+    opacity: .5;
+}
+
+.response_preloader.show .preloader_wallpaper button.disabled{
+    pointer-events: none;
+    background-color: var(--grey-50);
+}

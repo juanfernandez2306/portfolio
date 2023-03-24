@@ -7,9 +7,11 @@ import Projects from './assets/components/Projects';
 import Title from './assets/components/utils/Title';
 import AboutMe from './assets/components/AboutMe';
 import Footer from './assets/components/Footer';
+import PopupAlert from './assets/components/utils/popupAlert';
 
 function App() {
   const [navStatus, setNavStatus] = useState(false);
+  
   
   return (
     <>

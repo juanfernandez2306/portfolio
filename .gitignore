@@ -23,3 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 public/assets/overview/
+public/assets/php/vendor/
+public/assets/php/credentials_email.php
+public/assets/php/
