@@ -21,6 +21,7 @@ form{
     border-radius: .5rem;
     font-weight: 700;
     margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   form button.disabled{
@@ -36,7 +37,7 @@ form{
     form{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(4, 1fr);
+      grid-template-rows: auto;
       grid-template-areas: "headerTitle headerTitle"
                             "name email"
                             "message message"

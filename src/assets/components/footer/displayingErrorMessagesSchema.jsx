@@ -7,7 +7,7 @@ const displayingErrorMessagesSchema = object().shape({
         .required('Campo obligatorio'),
     message: string()
         .min(10, 'Mínimo 10 caracteres')
-        .max(140, 'Máximo 140 caracteres')
+        .max(300, 'Máximo 300 caracteres')
         .required('Campo obligatorio'),
     email: string().email('Email invalido').required('Campo obligatorio')
 });

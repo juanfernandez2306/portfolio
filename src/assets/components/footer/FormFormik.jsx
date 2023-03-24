@@ -34,6 +34,7 @@ const FormFormik = ({setpopupState, setResponseServer, setStyleResponse}) => {
 
             const styleMsg = (resp.status ? ' success ' : ' error') + ' stop_animation_preloader';
             setStyleResponse(styleMsg);
+            resetForm();
 
         }) 
         .catch(error => {
@@ -68,7 +69,7 @@ const FormFormik = ({setpopupState, setResponseServer, setStyleResponse}) => {
 
           <div className='container_input third'>
             <label htmlFor="">Mensaje</label>
-            <Field  as="textarea" id="message" name="message" />
+            <Field  as="textarea" id="message" name="message" maxLength="301" rows="5" />
             <div className='container_error'>
               <ErrorMessage name='message' />
             </div>

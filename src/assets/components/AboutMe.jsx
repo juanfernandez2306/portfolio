@@ -11,8 +11,8 @@ export default function AboutMe(){
             <aside>
                 <p>Ingeniero geodesta especializado en Sistemas de Información Geográfica (<b>SIG</b> o <b>GIS</b> por su acrónimo 
                     en inglés) con sólidos conocimientos en desarrollo de aplicaciones web de mapas 
-                    basados en mejorar la experiencia visual del usuario. Apasionado 
-                    por la ciencia de datos espaciales.
+                    basados en mejorar la experiencia visual del usuario.
+                    Apasionado por la ciencia de datos espaciales.
                     <span>&#127757;</span>
                     <span>&#x1F4BB;</span>
                     <span>&#x1F4C8;</span>
