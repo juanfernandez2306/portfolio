@@ -52,20 +52,26 @@ const FormFormik = ({setpopupState, setResponseServer, setStyleResponse}) => {
           <div className="container_input first">
             <label htmlFor="fullName">Nombre y Apellido</label>
             <Field type="text" id="fullName" name="fullName" />
-            <ErrorMessage component="span" name='fullName' />
+            <div className='container_error'>
+              <ErrorMessage name='fullName' />
+            </div>
           </div>
 
           <div className="container_input second">
             <label htmlFor="email">Email</label>
             <Field type="email" id="email" 
             name="email" />
-            <ErrorMessage component="span" name='email' />
+            <div className='container_error'>
+              <ErrorMessage name='email' />
+            </div>
           </div>
 
           <div className='container_input third'>
             <label htmlFor="">Mensaje</label>
             <Field  as="textarea" id="message" name="message" />
-            <ErrorMessage component="span" name='message' />
+            <div className='container_error'>
+              <ErrorMessage name='message' />
+            </div>
           </div>
 
           <button type="submit" className={disabled ? 'disabled' : ''}>Submit</button>

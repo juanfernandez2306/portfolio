@@ -122,4 +122,10 @@ form{
     color: var(--yellow-1000);
     margin-top: .5rem;
   }
+
+  .container_error{
+    height: 1.5rem;
+    color: var(--yellow-1000);
+    margin-top: .5rem;
+  }
   
