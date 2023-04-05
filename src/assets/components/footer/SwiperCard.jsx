@@ -55,30 +55,35 @@ export default function SwiperCard() {
           <a href="https://www.qgis.org/es/site/about/index.html" 
           target="_blank" className="colorSvg">
             <Qgis />
+            <span>QGIS</span>
           </a>
         </SwiperSlide>
         <SwiperSlide>
           <a href="https://support.microsoft.com/es-es/office/an%C3%A1lisis-de-datos-en-excel-3223aab8-f543-4fda-85ed-76bb0295ffc4" 
           target="_blank" className="colorSvg">
             <Excel />
+            <span>Excel</span>
           </a>
         </SwiperSlide>
         <SwiperSlide>
           <a href="https://www.autodesk.es/products/autocad/overview?term=1-YEAR&tab=subscription&plc=ACDIST"
           target="_blank" className="colorSvg">
            <AutocadDWG /> 
+           <span>AutoCAD</span>
           </a>
         </SwiperSlide>
         <SwiperSlide>
           <a href="https://www.google.com/intl/es-419/earth/"
           target="_blank" className="colorSvg">
             <GoogleEarth />
+            <span>Google Earth</span>
           </a>
         </SwiperSlide>
         <SwiperSlide>
           <a href="https://laravel.com/"
           target="_blank" className="colorSvg">
             <Laravel />
+            <span>Laravel</span>
           </a>
         </SwiperSlide>
         <SwiperSlide>
@@ -87,8 +92,9 @@ export default function SwiperCard() {
           </a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="https://es.reactjs.org/" target="_blank">
+          <a href="https://react.dev/" target="_blank">
             <LogoReact />
+            <span>React</span>
           </a>
         </SwiperSlide>
         <SwiperSlide>
@@ -99,6 +105,7 @@ export default function SwiperCard() {
         <SwiperSlide>
           <a href="https://mappinggis.com/2020/11/7-maneras-de-usar-python-en-qgis/" className="colorSvg" target="_blank">
             <Python />
+            <span>Python</span>
           </a>
         </SwiperSlide>
       </Swiper>

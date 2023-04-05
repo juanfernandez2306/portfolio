@@ -20,7 +20,7 @@ const FormFormik = ({setpopupState, setResponseServer, setStyleResponse}) => {
       validationSchema={displayingErrorMessagesSchema}
       onSubmit={(values, {resetForm}) => {
 
-        const endpoint = 'http://localhost/php/phpmailer/sendEmail_test.php';
+        const endpoint = 'http://localhost/php/phpmailer/sendEmail.php';
 
         setDisabled(true);
         setpopupState(true);
@@ -75,7 +75,7 @@ const FormFormik = ({setpopupState, setResponseServer, setStyleResponse}) => {
             </div>
           </div>
 
-          <button type="submit" className={disabled ? 'disabled' : ''}>Submit</button>
+          <button type="submit" className={disabled ? 'disabled' : ''}>Enviar</button>
         </Form>
         
     </Formik>
