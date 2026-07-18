@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Sistema de Geolocalización – Gestión De Palma Digital",
+    "description": "Desarrollo de una Aplicación Web Progresiva (en inglés, PWA) enfocada en el registro y monitoreo en campo de la plaga Strategus aloeus. Diseñada bajo un enfoque offline-first (diseño centrado en trabajar sin conexión) con una UX (experiencia de usuario) simplificada para operarios agrícolas, optimizando el rendimiento mediante el uso de APIs web nativas (Geolocation y DeviceOrientation). Construida con React, CSS Modules y MapLibre GL para la renderización fluida de mapas y capas vectoriales de alto rendimiento.",
+    "link": "https://strategus.juanfgeo.com/",
+    "github": "https://github.com/juanfernandez2306/strategus",
+    "image": "/projects/pwa_strategus.webm",
+    "video": "https://www.youtube.com/shorts/ai9CtzcpeOA",
+    "tags": ["REACT", "CSSMODULE"]
+  },
+  {
+    "title": "Panel de Control (Dashboard) – Gestión De Palma Digital",
+    "description": "Diseño e implementación de un panel de administración centralizado para la visualización, análisis y gestión de los datos de monitoreo de la plaga insecto Strategus aloeus. El sistema incluye módulos de gestión de usuarios, resúmenes analíticos de jornadas de campo y generación automatizada de reportes en Excel. Desarrollado con React, CSS Modules y MapLibre GL para la visualización interactiva de mapas.",
+    "link": "https://adventjs.dev",
+    "image": "/projects/admin_strategus.webm",
+    "tags": ["REACT", "CSSMODULE"]
+  },
+  {
+    "title": "API REST – Gestión De Palma Digital",
+    "description": "Diseño e implementación de una API REST para la administración de usuarios (autenticación mediante tokens, verificación de email y control de acceso basado en roles) y procesamiento de datos del monitoreo del insecto plaga Strategus aloeus. El sistema integra validación topológica automatizada (point-in-polygon) aprovechando la extensión geográfica nativa de MySQL. Construida con el framework Slim (PHP) e integrada con PHPMailer y PhpSpreadsheet para la generación automatizada de reportes en Excel.",
+    "image": "/projects/api_strategus.webm",
+    "github": "https://github.com/juanfernandez2306/api_strategus",
+    "tags": ["PHP", "MYSQL"]
+  }
+]

@@ -1,0 +1,81 @@
+@import "@fontsource/montserrat/400.css";
+@import "@fontsource/montserrat/700.css";
+
+:root {
+  --font-base: "Montserrat", arial, system-ui, -apple-system, sans-serif;
+  /* --- COLORES BASE (Modo Claro) --- */
+  --color-bg-body: #f9fafb;             
+  --color-text-title: #1f2937;          
+  --color-text-desc: #374151;           
+  --color-text-highlight: #d97706;
+  
+  /* --- BOTONES (Modo Claro) --- */
+  --color-btn-bg: #f3f4f6;
+  --color-btn-border: #d1d5db;
+  --color-btn-hover-bg: var(--color-text-title); /* Reutiliza #1f2937 */
+  --color-btn-hover-border: #111827;
+  
+  /* --- AVATAR & BRILLO --- */
+  --color-avatar-glow: rgba(250, 204, 21, 0.3);
+  --color-avatar-ring: rgba(250, 204, 21, 0.6); 
+  --color-ring-offset: #f9fafb;                  
+  
+  --color-badge-text: #166534;
+  --color-badge-bg: #f0fdf4;
+  --gradient-badge-start: #51E4B8;
+  --gradient-badge-end: #21554E;
+
+  /* --- GRADIENT NOMBRE --- */
+  --gradient-hero-name: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* --- COLORES BASE (Modo Oscuro) --- */
+    --color-bg-body: #030712;           
+    --color-text-title: #f9fafb;        
+    --color-text-desc: #d1d5db;         
+    --color-text-highlight: #fef08a;    
+
+    /* --- BOTONES (Modo Oscuro) --- */
+    --color-btn-bg: var(--color-text-title-claro, #1f2937);
+    --color-btn-border: #4b5563;
+
+    /* --- AVATAR & BRILLO --- */
+    --color-avatar-glow: rgba(250, 204, 21, 0.15); 
+    --color-avatar-ring: rgba(250, 204, 21, 0.5);  
+    --color-ring-offset: #030712;                   
+
+    /* --- COLORES BADGE --- */
+    --color-badge-text: rgba(255, 255, 255, 0.8);  
+    --color-badge-bg: #111827;                       
+  }
+}
+
+html.dark {
+  --color-bg-body: #030712;
+  --color-text-title: #f9fafb;
+  --color-text-desc: #d1d5db;
+  --color-text-highlight: #fef08a;
+  
+  /* --- BOTONES (Modo Oscuro Clase) --- */
+  --color-btn-bg: #1f2937;
+  --color-btn-border: #4b5563;
+
+  --color-avatar-glow: rgba(250, 204, 21, 0.15);
+  --color-avatar-ring: rgba(250, 204, 21, 0.5);
+  --color-ring-offset: #030712;
+  --color-badge-text: rgba(255, 255, 255, 0.8);
+  --color-badge-bg: #111827;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--color-bg-body);
+}

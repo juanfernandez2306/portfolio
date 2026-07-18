@@ -1,0 +1,52 @@
+/* src/components/Badge/Badge.module.css */
+.badgeContainer {
+  display: inline-flex;
+  align-items: center;
+}
+
+.spinnerWrapper {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  border-radius: 9999px;
+  padding: 1px; /* border simulator */
+}
+
+/* El fondo animado que rota */
+.spinnerBg {
+  position: absolute;
+  inset: -1000%;
+  animation: spin 2s linear infinite;
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    var(--gradient-badge-start) 0%,
+    var(--gradient-badge-end) 50%,
+    var(--gradient-badge-start) 100%
+  );
+}
+
+/* El contenedor interno con fondo semi-transparente que difumina el spin de abajo */
+.content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.25rem 0.75rem; /* py-1 px-3 */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500;
+  color: var(--color-badge-text);
+  background-color: var(--color-badge-bg);
+  border-radius: 9999px;
+  cursor: pointer;
+  backdrop-filter: blur(40px); /* backdrop-blur-3xl */
+  white-space: nowrap;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

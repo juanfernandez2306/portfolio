@@ -1,0 +1,53 @@
+.linkButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  text-decoration: none;
+  max-width: fit-content;
+  border-radius: 0.75rem;
+  border: 1px solid;
+  transition: all 0.2s ease;
+  
+  /* --- Tema Dinámico --- */
+  background-color: var(--color-btn-bg);
+  color: var(--color-text-title);
+  border-color: var(--color-btn-border);
+}
+
+/* --- Estados Hover, Focus y Active --- */
+.linkButton:hover {
+  background-color: var(--color-btn-hover-bg, #1f2937);
+  border-color: var(--color-btn-hover-border, #111827);
+  color: #ffffff;
+}
+
+.linkButton:focus {
+  outline: none;
+}
+
+.linkButton:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-ring-offset), 
+              0 0 0 4px rgba(234, 179, 8, 0.8);
+}
+
+.linkButton:active {
+  background-color: #000000;
+}
+
+/* --- Ajustes específicos por esquema (Media query) --- */
+@media (prefers-color-scheme: dark) {
+  :global(:root:not(.light)) .linkButton:focus-visible {
+    box-shadow: 0 0 0 2px var(--color-ring-offset), 
+                0 0 0 4px rgba(255, 255, 255, 1);
+  }
+}
+
+/* Soporte clase .dark en HTML (El color de fondo, texto y borde cambian automáticamente mediante variables) */
+:global(html.dark) .linkButton:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-ring-offset), 
+              0 0 0 4px rgba(255, 255, 255, 1);
+}

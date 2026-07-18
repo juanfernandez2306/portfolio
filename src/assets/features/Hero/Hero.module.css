@@ -1,0 +1,118 @@
+/* src/components/Hero/Hero.module.css */
+.heroContainer {
+  max-width: 36rem; /* max-w-xl */
+  margin: 0;
+  gap: 1rem;
+  align-self: flex-start;
+}
+
+.headerRow {
+  display: flex;
+  gap: 1rem; /* gap-4 */
+  margin-bottom: 1.5rem; /* mb-6 */
+  align-items: center;
+}
+
+/* Avatar con efecto de brillo */
+.avatarWrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatarGlow {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background-color: var(--color-avatar-glow);
+  filter: blur(24px); /* blur-xl */
+  transform: scale(1.25);
+}
+
+.avatarImage {
+  position: relative;
+  border-radius: 9999px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl */
+  width: 5rem; /* size-20 */
+  height: 5rem;
+  object-fit: cover;
+  background-color: #4BB8FA;
+  box-shadow: 0 0 0 2px var(--color-avatar-ring), 0 0 0 4px var(--color-ring-offset); /* ring-2 + ring-offset-2 */
+}
+
+/* Enlace del Badge */
+.badgeLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.badgeLink:hover {
+  transform: scale(1.05);
+}
+
+.badgeIcon {
+  width: 0.75rem; /* size-3 */
+  height: 0.75rem;
+  margin-right: 0.25rem;
+}
+
+/* Tipografía */
+.title {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700;
+  letter-spacing: -0.025em; /* tracking-tight */
+  color: var(--color-text-title);
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 3rem; /* sm:text-5xl */
+  }
+}
+
+.gradientName {
+  background: var(--gradient-hero-name);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.description {
+  margin-top: 1.5rem; /* mt-6 */
+  font-size: 1.25rem; /* text-xl */
+  line-height: 1.75rem;
+  color: var(--color-text-desc);
+}
+
+.description strong {
+  color: var(--color-text-highlight);
+  font-weight: 600; /* [&>strong]:font-semibold */
+}
+
+/* Navegación Redes */
+.navSocial {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* gap-4 */
+  margin-top: 2rem; /* mt-8 */
+}
+
+/* --- ANIMACIONES --- */
+.animFadeIn {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.delay1 { animation-delay: 0.15s; }
+.delay2 { animation-delay: 0.3s; }
+.delay3 { animation-delay: 0.45s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

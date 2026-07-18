@@ -1,0 +1,20 @@
+[
+  {
+    "date": "Agosto 2023 - Actualidad",
+    "title": "Topógrafo",
+    "company": "Agropecuaria Guaikinima, C.A.",
+    "description": "Lideré el replanteo topográfico de 100 hectáreas de palma aceitera utilizando receptores GNSS RTK y gestioné la digitalización y estructuración de los datos geográficos de la finca. Asimismo, desarrollé una aplicación web SIG (Sistema de Información Geográfico) para optimizar el monitoreo del insecto plaga Strategus aloeus, fomentando esquemas de prevención basados en datos y automatización de procesos ETL (del inglés: extraer, transformar y cargar)."
+  },
+  {
+    "date": "Septiembre 2022 - Noviembre 2022",
+    "title": "Asesor en Sistemas de Información Geográfica (SIG) (Freelance)",
+    "company": "FULLDATA Comunicaciones, C.A",
+    "description": "Lideré la documentación y mapeo de redes de fibra óptica mediante la digitalización y revisión de la georreferenciación de más de 8,500 puntos de la red. Desarrollé algoritmos geográficos en Python para automatizar procesos y optimizar la topología y geometría de la infraestructura existente. Los datos generados se integraron como insumo clave para la gestión operativa en Ozmap, exportándose en formatos KMZ/KML, planos de AutoCAD y registros en Excel."
+  },
+  {
+    "date": "Abril 2017 - Febrero 2022",
+    "title": "Geógrafo",
+    "company": "Secretaria de Salud de la Gobernación del Estado Zulia",
+    "description": "Responsable de la consolidación de más de 2,630 comunidades con información geográfica, topológica y administrativa del estado Zulia, como insumo primario para el SIS-EPI (Sistema de Información de Salud, Vigilancia Epidemiológica y Notificación Obligatoria). Asimismo, logré una cobertura de georreferenciación superior al 90% en la red hospitalaria, ambulatoria especializada y consultorios de atención primaria. Con ello, promoví el uso de geoportales con mapas interactivos de vigilancia epidemiológica y cruces dinámicos de datos, optimizando el análisis de distribución geográfica para la toma de decisiones durante la emergencia del COVID-19"
+  }
+]

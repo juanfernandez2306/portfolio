@@ -1,0 +1,29 @@
+/* src/components/SocialPill/SocialPill.module.css */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-desc);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.pill:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+  border-color: var(--color-text-highlight);
+}
+
+@media (prefers-color-scheme: dark) {
+  .pill {
+    border-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+}

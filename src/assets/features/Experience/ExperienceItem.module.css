@@ -1,0 +1,154 @@
+/* src/components/Experience/ExperienceItem.module.css */
+
+.experienceGrid {
+  position: relative;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  padding-bottom: 3rem;
+  display: grid;
+  gap: 1rem;
+}
+
+/* Línea temporal vertical */
+.experienceGrid::before {
+  content: '';
+  position: absolute;
+  left: -35px;
+  display: block;
+  height: 100%;
+  border-left: 2px solid var(--color-text-desc);
+  opacity: 0.15;
+}
+
+.leftColumn {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.stickyContent {
+  position: sticky;
+  top: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+}
+
+/* Contenedor del punto indicador */
+.dotContainer {
+  position: absolute;
+  left: -42px;
+  display: flex;
+  width: 14px;
+  height: 14px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animación pulsante para el trabajo actual */
+.pulseRing {
+  position: absolute;
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--color-text-highlight);
+  opacity: 0.4;
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.indicatorDot {
+  position: relative;
+  display: inline-flex;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-text-highlight);
+}
+
+.activeGlow {
+  box-shadow: 0 0 10px 3px var(--color-text-highlight);
+  opacity: 0.9;
+}
+
+/* Textos adaptados a variables globales */
+.jobTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-text-highlight);
+}
+
+.companyName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0.25rem 0 0 0;
+  color: var(--color-text-title);
+}
+
+.jobDate {
+  font-size: 0.875rem;
+  color: var(--color-text-desc);
+  opacity: 0.8;
+}
+
+.jobDescription {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+  color: var(--color-text-desc);
+  line-height: 1.6;
+}
+
+.jobDescription p {
+  margin: 0;
+}
+
+/* Estilo del enlace de acción */
+.linkInline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text-highlight);
+  transition: opacity 0.2s ease;
+  width: fit-content;
+}
+
+.linkInline:hover {
+  opacity: 0.8;
+}
+
+.arrowIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Animación Keyframes */
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Responsivo para Escritorio (mayor a 768px) */
+@media (min-width: 768px) {
+  .experienceGrid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+
+  .leftColumn {
+    grid-column: span 2 / span 2;
+    padding-bottom: 3rem;
+  }
+
+  .jobDescription {
+    grid-column: span 3 / span 3;
+  }
+}

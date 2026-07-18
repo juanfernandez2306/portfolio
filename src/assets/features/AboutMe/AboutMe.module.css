@@ -1,0 +1,70 @@
+.contenedor {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /* gap-8 */
+  color: var(--color-text-desc);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  text-wrap: pretty; /* text-pretty */
+  order: 2;
+}
+
+.content p {
+  margin-bottom: 1rem; /* [&>p]:mb-4 */
+}
+
+/* Manejo del text-highlight dinámico según tu paleta */
+.highlight {
+  font-weight: 400; /* [&>p>strong]:font-normal */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; /* font-mono */
+  color: var(--color-text-highlight); /* Usa el amarillo accesible claro/oscuro de tu CSS */
+}
+
+.image {
+  order: 1;
+  object-fit: cover;
+  width: 16rem; /* w-64 */
+  height: 100%;
+  padding: 0.25rem; /* p-1 */
+  aspect-ratio: 1 / 1;
+  border-radius: 1rem; /* rounded-2xl */
+  transform: rotate(3deg); /* rotate-3 */
+  object-position: 50% 50%;
+  
+  /* Fondos y anillos usando tus variables de avatar */
+  background-color: rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 0 0 1px var(--color-avatar-ring); /* Combina el efecto ring con tus variables */
+}
+
+/* Media query para pantallas medianas (md: equivalente a 768px) */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+  
+  .content {
+    order: 1;
+  }
+  
+  .image {
+    order: 2;
+  }
+}
+
+/* Media query opcional para pantallas grandes si quieres aumentar el padding (lg:p-2) */
+@media (min-width: 1024px) {
+  .image {
+    padding: 0.5rem;
+  }
+}
